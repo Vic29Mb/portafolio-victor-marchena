@@ -72,3 +72,13 @@ blockquote { margin: 1.2rem 0 0; color: var(--muted); }
   nav a { padding: .35rem .45rem; }
   .hero-chart { max-width: 460px; }
 }
+
+.report-card { display: flex; flex-direction: column; }
+.report-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }
+.report-card .report-actions { margin-top: auto; padding-top: .5rem; }
+.report-card .report-actions a, .report-external { font-size: .9rem; }
+#vista-reporte { width: min(1100px, calc(100% - 1rem)); max-height: 94dvh; padding: 0; border: 1px solid var(--line); border-radius: .8rem; background: var(--panel); color: var(--text); }
+#vista-reporte::backdrop { background: rgb(0 0 0 / .78); }
+.report-toolbar { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: space-between; align-items: center; padding: .8rem; }
+.report-toolbar h2 { margin: 0; }
+.report-content iframe { display: block; width: 100%; height: min(70dvh, 700px); border: 0; background: var(--bg); }

@@ -59,3 +59,35 @@ filters.hidden = false;
 filterCatalog('');
 window.addEventListener('hashchange', () => showView(true));
 showView(false);
+
+const reportDialog = document.querySelector('#vista-reporte');
+const reportTitle = reportDialog.querySelector('h2');
+const reportExternal = reportDialog.querySelector('.report-external');
+const reportContent = reportDialog.querySelector('.report-content');
+
+if (typeof reportDialog.showModal === 'function') {
+  for (const card of cards) {
+    const link = card.querySelector('.report-link');
+    const title = card.querySelector('h2').textContent;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'button';
+    button.textContent = 'Ver aquí';
+    button.setAttribute('aria-label', 'Ver tablero aquí: ' + title);
+    button.addEventListener('click', () => {
+      reportTitle.textContent = title;
+      reportExternal.href = link.href;
+      const frame = document.createElement('iframe');
+      frame.title = title;
+      frame.src = link.href;
+      frame.allowFullscreen = true;
+      reportContent.replaceChildren(frame);
+      reportDialog.showModal();
+    });
+    card.querySelector('.report-actions').prepend(button);
+  }
+  reportDialog.addEventListener('close', () => reportContent.replaceChildren());
+  window.addEventListener('hashchange', () => {
+    if (reportDialog.open) reportDialog.close();
+  });
+}
