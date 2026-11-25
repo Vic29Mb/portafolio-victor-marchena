@@ -3,98 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio de Victor Marchena, economista colegiado, consultor de datos y docente.">
-  <title>Victor Marchena | Economista y consultor de datos</title>
+  <meta name="description" content="Victor Marchena Bautista, economista colegiado, consultor de datos y docente. Portafolio y servicios METANOIA.">
+  <title>Victor Marchena | Economía, datos y programación</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#inicio">Victor Marchena<span>.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion" hidden>Menú</button>
-      <nav id="navegacion" aria-label="Principal">
-        <a href="#proyectos">Proyectos</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#docencia">Docencia</a>
-        <a href="#contacto">Contacto</a>
+  <header>
+    <div class="wrap header">
+      <a class="brand" href="#inicio"><span>{ VM }</span> Victor Marchena</a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#experiencia">Experiencia</a><a href="#tableros">Tableros</a><a href="#tesis">Tesis</a><a href="#servicios">Servicios</a>
       </nav>
     </div>
   </header>
-  <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="label">Economista colegiado · Consultor · Docente</p>
-          <h1>Victor Marchena<br>Bautista<span>.</span></h1>
-          <p class="intro">Diseño indicadores, desarrollo tableros y automatizo reportes. Aplico estadística y econometría a problemas de gestión e investigación.</p>
-          <div class="actions">
-            <a class="button primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
-            <a class="button secondary" href="https://w.app/vicdata">Escríbeme por WhatsApp</a>
-          </div>
-        </div>
-        <aside class="profile" aria-label="Perfil profesional">
-          <div class="monogram" aria-hidden="true">VM<span>.</span></div>
-          <p class="profile-title">Más de 5 años de experiencia</p>
-          <p>Análisis de datos y BI para el sector público y privado.</p>
-          <p>Maestría en Análisis y Visualización de Datos Masivos, en curso.</p>
-        </aside>
-      </div>
-    </section>
-    <section class="wrap section" id="proyectos">
-      <h2>Proyectos seleccionados</h2>
-      <div class="cards">
-        <article class="card">
-          <p class="label">ANIN · Adquisiciones</p>
-          <h3>Seguimiento de intervenciones del DS 096</h3>
-          <p>Automaticé la consolidación del reporte semanal y desarrollé un tablero para consultar estados, fechas y montos de las intervenciones.</p>
-          <p class="tools">Power BI · Power Query · DAX · Office Scripts</p>
-        </article>
-        <article class="card">
-          <p class="label">MINSA · Calidad en salud</p>
-          <h3>Indicadores de calidad en salud</h3>
-          <p>Estandaricé bases de asistencias técnicas y seguridad del paciente, y diseñé un tablero centralizado para seguir indicadores e identificar brechas.</p>
-          <p class="tools">Power BI · DAX · Excel · Stata</p>
-        </article>
-        <article class="card">
-          <p class="label">SENAMHI · Red de estaciones</p>
-          <h3>Monitoreo de estaciones meteorológicas</h3>
-          <p>Implementé un tablero para monitorear más de 500 estaciones con indicadores de operatividad, mapas y tendencias. Documenté su uso y capacité al equipo.</p>
-          <p class="tools">Power BI · Modelado de datos · Visualización</p>
-        </article>
-      </div>
-    </section>
-    <section class="band" id="experiencia">
-      <div class="wrap section split">
-        <div><h2>Experiencia</h2><p class="muted">Roles seleccionados en gestión y análisis de información.</p></div>
-        <div class="roles">
-          <article><h3>Autoridad Nacional de Infraestructura</h3><p>Consultor en Análisis, Seguimiento y Gestión de la Información · DAI</p></article>
-          <article><h3>Ministerio de Salud</h3><p>Especialista en Gestión de la Información · Calidad en Salud</p></article>
-          <article><h3>SALUDPOL</h3><p>Especialista en Análisis de Datos · Planeamiento y Gestión de la Información</p></article>
-          <article><h3>Defensoría del Pueblo</h3><p>Analista de Datos · Supervisiones e informes defensoriales</p></article>
-        </div>
-      </div>
-    </section>
-    <section class="wrap section split" id="docencia">
-      <div><h2>Docencia y asesoría</h2></div>
+  <main class="wrap" id="contenido" tabindex="-1">
+    <section class="view hero" id="inicio" aria-labelledby="titulo-inicio">
       <div>
-        <h3>Excel, VBA y Power BI</h3>
-        <p class="muted">Diseño ejercicios para que los participantes practiquen con tareas de su trabajo, desde la limpieza de datos hasta la automatización de reportes y el diseño de tableros.</p>
-        <h3>Econometría aplicada</h3>
-        <p class="muted">Acompaño investigaciones y tesis en la preparación de datos, la elección de métodos y la interpretación de resultados.</p>
-      </div>
-    </section>
-    <section class="band" id="contacto">
-      <div class="wrap section split">
-        <div><h2>Contacto</h2><p class="muted">Consultoría, capacitación y asesoría en análisis de datos.</p></div>
+        <p class="eyebrow">Economista colegiado · Consultor · Docente</p>
+        <h1 id="titulo-inicio">Victor Marchena Bautista<span>.</span></h1>
+        <p class="lead">Combino economía y programación para analizar datos, construir tableros y automatizar procesos.</p>
         <div class="actions">
-          <a class="button primary" href="https://w.app/vicdata">Escríbeme por WhatsApp</a>
-          <a class="button secondary" href="https://www.linkedin.com/in/vicdata/">Ver LinkedIn</a>
+          <a class="button primary" href="#tableros">Explorar tableros <span aria-hidden="true">↗</span></a>
+          <a class="button" href="#servicios">Ver servicios METANOIA</a>
         </div>
       </div>
+      <figure class="hero-chart">
+        <svg viewBox="0 0 360 246" role="img" aria-label="Gráfico conceptual de barras y tendencia entre llaves">
+          <g fill="none" stroke="#2a4560"><path d="M54 45H306 M54 86H306 M54 127H306 M54 168H306 M54 209H306"/><path d="M54 45V209 M117 45V209 M180 45V209 M243 45V209 M306 45V209"/></g>
+          <g fill="#234c67"><rect x="75" y="158" width="30" height="51" rx="3"/><rect x="135" y="132" width="30" height="77" rx="3"/><rect x="195" y="107" width="30" height="102" rx="3"/><rect x="255" y="79" width="30" height="130" rx="3"/></g>
+          <path d="M90 140L150 106L210 119L270 61" fill="none" stroke="#7df3cb" stroke-width="3"/>
+          <g fill="#7df3cb"><circle cx="90" cy="140" r="5"/><circle cx="150" cy="106" r="5"/><circle cx="210" cy="119" r="5"/><circle cx="270" cy="61" r="5"/></g>
+          <g fill="none" stroke="#a4c9ff" stroke-width="2"><path d="M43 30H37Q29 30 29 39V108Q29 122 17 122Q29 122 29 136V205Q29 214 37 214H43"/><path d="M317 30H323Q331 30 331 39V108Q331 122 343 122Q331 122 331 136V205Q331 214 323 214H317"/></g>
+        </svg>
+        <figcaption>Econometría <span>+</span> Inteligencia de negocios <span>+</span> Automatización</figcaption>
+      </figure>
+    </section>
+    <section class="view" id="experiencia" aria-labelledby="titulo-experiencia">
+      <h1 id="titulo-experiencia">Experiencia</h1>
+      <p class="lead">Más de cinco años de experiencia en análisis de datos e inteligencia de negocios. Maestría en Análisis y Visualización de Datos Masivos, en curso.</p>
+      <div class="grid">
+        <article><p class="eyebrow">ANIN</p><h2>Seguimiento de adquisiciones</h2><p>Automaticé la consolidación del reporte semanal del DS 096 y desarrollé un tablero con estados, fechas y montos.</p><p class="tools">Power BI · DAX · Office Scripts</p></article>
+        <article><p class="eyebrow">MINSA</p><h2>Calidad en salud</h2><p>Estandaricé bases de asistencias técnicas y seguridad del paciente, y diseñé un tablero para el seguimiento de indicadores.</p><p class="tools">Power BI · Excel · Stata</p></article>
+        <article><p class="eyebrow">SALUDPOL</p><h2>Gestión de prestaciones</h2><p>Integré indicadores de ocho áreas en el Tablero Integrado de Control y desarrollé modelos de datos y medidas de gestión.</p><p class="tools">Power BI · PostgreSQL · DAX</p></article>
+        <article><p class="eyebrow">Defensoría del Pueblo</p><h2>Supervisiones nacionales</h2><p>Depuré y analicé datos de supervisiones y elaboré indicadores y tableros para informes defensoriales.</p><p class="tools">Stata · Oracle SQL · Power BI</p></article>
+        <article><p class="eyebrow">SENAMHI</p><h2>Red de estaciones meteorológicas</h2><p>Implementé una herramienta de monitoreo de más de 500 estaciones y capacité al personal en el uso del tablero.</p><p class="tools">Power BI · Mapas · Modelado de datos</p></article>
+        <article><p class="eyebrow">Docencia</p><h2>Excel, VBA y Power BI</h2><p>He impartido capacitación práctica en análisis, automatización y diseño de tableros, con ejercicios orientados al trabajo de cada participante.</p><a href="#academy">Ver cursos y clases ↗</a></article>
+      </div>
+    </section>
+    <section class="view" id="tableros" aria-labelledby="titulo-tableros">
+      <h1 id="titulo-tableros">Tableros de control</h1>
+      <p class="lead">Selección de trabajos en seguimiento institucional, calidad en salud y gestión operativa.</p>
+      <div class="filters" aria-label="Filtrar tableros por institución" hidden></div>
+      <div class="grid" id="catalogo">
+        <article data-institucion="ANIN"><p class="eyebrow">ANIN</p><h2>Intervenciones del DS 096</h2><p>Seguimiento de estados, fechas y montos de las intervenciones.</p></article>
+        <article data-institucion="MINSA"><p class="eyebrow">MINSA</p><h2>Indicadores de calidad en salud</h2><p>Seguimiento de indicadores para identificar brechas y apoyar la gestión.</p></article>
+        <article data-institucion="SALUDPOL"><p class="eyebrow">SALUDPOL</p><h2>Tablero Integrado de Control</h2><p>Indicadores de gestión de ocho áreas, incluidas prestaciones y cartas de garantía.</p></article>
+        <article data-institucion="Defensoría del Pueblo"><p class="eyebrow">Defensoría del Pueblo</p><h2>Supervisión de establecimientos</h2><p>Seguimiento de establecimientos penitenciarios, instituciones educativas y almacenes humanitarios.</p></article>
+      </div>
+      <p id="resultado-filtro" class="sr-only" role="status"></p>
+    </section>
+    <section class="view" id="tesis" aria-labelledby="titulo-tesis">
+      <h1 id="titulo-tesis">Tesis y reconocimientos</h1>
+      <p class="lead">Agradecimientos de investigaciones en las que brindé acompañamiento o apoyo estadístico.</p>
+      <div class="quotes">
+        <article><p class="eyebrow">Jazmín Milagros Diestra Alcántara</p><h2>Factores socioeconómicos determinantes de la migración interna en el Perú en los años 2019 y 2023</h2><blockquote>«A mi amigo Victor por su paciencia y guía.»</blockquote></article>
+        <article><p class="eyebrow">Nicole Valeria Cherres Bermejo y Vanesa Trucios Tamashiro</p><h2>La influencia de las redes sociales Instagram y Facebook en la decisión de compra online de prendas de vestir en mujeres de Lima Metropolitana</h2><blockquote>«Asimismo, extendemos nuestro sincero agradecimiento al Ecom. Víctor Marchena, por su amable disposición y gran apoyo en el análisis de estadístico, lo cual fue de gran ayuda para el desarrollo de este trabajo.»</blockquote></article>
+        <article><p class="eyebrow">Fiorela Gissela Flores Toribio · Tesis de maestría</p><h2>Qali Warma y su impacto en el estado nutricional de escolares de la cohorte menor Niños del Milenio-Perú</h2><blockquote>«Finalmente, un agradecimiento especial al Economista Víctor Marchena Bautista, por todo el soporte brindado durante el proceso del análisis estadístico, mi gratitud por su buena onda y su predisposición.»</blockquote></article>
+      </div>
+      <a class="button primary" href="#research">Ver servicio de asesoría de tesis</a>
+    </section>
+    <section class="view" id="servicios" aria-labelledby="titulo-servicios">
+      <h1 id="titulo-servicios">Servicios METANOIA</h1>
+      <div class="grid">
+        <article><p class="eyebrow">METANOIA Research</p><h2>Investigación y asesoría de tesis</h2><p>Metodología, análisis estadístico y econometría aplicada.</p><a href="#research">Explorar Research ↗</a></article>
+        <article><p class="eyebrow">METANOIA Data Solutions</p><h2>Análisis de datos y Power BI</h2><p>Bases de datos, indicadores y tableros interactivos.</p><a href="#data-solutions">Explorar Data Solutions ↗</a></article>
+        <article><p class="eyebrow">METANOIA Automation</p><h2>Automatización de procesos</h2><p>Reportes, formularios y flujos de trabajo repetitivos.</p><a href="#automation">Explorar Automation ↗</a></article>
+        <article><p class="eyebrow">METANOIA Academy</p><h2>Cursos y capacitación</h2><p>Clases personalizadas de software estadístico, análisis de datos y BI.</p><a href="#academy">Explorar Academy ↗</a></article>
+        <article><p class="eyebrow">METANOIA Consulting</p><h2>Consultoría integral</h2><p>Proyectos que combinan investigación, indicadores, BI y automatización.</p><a href="#consulting">Explorar Consulting ↗</a></article>
+      </div>
+    </section>
+    <section class="view service" id="research" aria-labelledby="titulo-research">
+      <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Research</p><h1 id="titulo-research">Investigación y asesoría de tesis</h1>
+      <ul><li>Diseño metodológico, formulación de preguntas y operacionalización de variables.</li><li>Preparación de bases, análisis estadístico y estimación de modelos econométricos.</li><li>Interpretación de resultados y acompañamiento para preparar la sustentación.</li></ul>
+      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Research en WhatsApp">Consultar por WhatsApp</a><a class="button" href="#tesis">Ver agradecimientos</a></div>
+    </section>
+    <section class="view service" id="data-solutions" aria-labelledby="titulo-data">
+      <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Data Solutions</p><h1 id="titulo-data">Análisis de datos y Power BI</h1>
+      <ul><li>Consolidación, depuración y modelado de bases de datos.</li><li>Diseño de indicadores, medidas DAX y transformaciones con Power Query.</li><li>Tableros interactivos, documentación y transferencia al equipo usuario.</li></ul>
+      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Data Solutions en WhatsApp">Consultar por WhatsApp</a><a class="button" href="#tableros">Ver tableros</a></div>
+    </section>
+    <section class="view service" id="automation" aria-labelledby="titulo-automation">
+      <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Automation</p><h1 id="titulo-automation">Automatización de procesos</h1>
+      <ul><li>Formularios de registro con validación de datos.</li><li>Consolidación de archivos y generación de reportes periódicos.</li><li>Flujos a medida con Excel VBA, Office Scripts, Google Sheets y Apps Script.</li></ul>
+      <a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Automation en WhatsApp">Consultar por WhatsApp</a>
+    </section>
+    <section class="view service" id="academy" aria-labelledby="titulo-academy">
+      <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Academy</p><h1 id="titulo-academy">Cursos y capacitación</h1>
+      <p class="lead">Dicto clases personalizadas y capacitación para equipos, con ejercicios adaptados al nivel y a los objetivos de cada grupo.</p>
+      <ul><li><strong>Software estadístico y programación</strong> en Stata, R y Python.</li><li><strong>Análisis y reportería</strong> con Excel, VBA, Power BI y SQL.</li><li><strong>Métodos cuantitativos</strong> en estadística aplicada, econometría y series de tiempo.</li></ul>
+      <a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Academy en WhatsApp">Consultar por WhatsApp</a>
+    </section>
+    <section class="view service" id="consulting" aria-labelledby="titulo-consulting">
+      <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Consulting</p><h1 id="titulo-consulting">Consultoría integral</h1>
+      <ul><li>Diagnóstico de fuentes, brechas de información y necesidades de seguimiento.</li><li>Diseño de soluciones que integran análisis económico, indicadores, tableros y automatización.</li><li>Documentación, presentación ejecutiva y capacitación para la entrega.</li></ul>
+      <a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Consulting en WhatsApp">Consultar por WhatsApp</a>
+    </section>
+    <section class="view" id="contacto" aria-labelledby="titulo-contacto">
+      <h1 id="titulo-contacto">Contacto</h1>
+      <div class="actions"><a class="button primary" href="https://w.app/vicdata">Escríbeme por WhatsApp</a><a class="button" href="https://www.linkedin.com/in/vicdata/">Ver LinkedIn</a></div>
     </section>
   </main>
-  <footer class="wrap footer"><span>Victor Marchena Bautista</span><a href="#inicio">Volver arriba ↑</a></footer>
+  <footer class="wrap footer"><strong>Victor Marchena Bautista</strong><div><a href="#contacto">Contacto</a><a href="https://www.linkedin.com/in/vicdata/">LinkedIn</a><a href="https://w.app/vicdata">WhatsApp</a></div></footer>
 </body>
 </html>
