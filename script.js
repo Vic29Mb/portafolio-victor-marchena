@@ -21,8 +21,8 @@ function showView(moveFocus) {
 
   const heading = activeView.querySelector('h1');
   document.title = activeView.id === 'inicio'
-    ? 'Victor Marchena | Economía, datos y programación'
-    : heading.textContent + ' | Victor Marchena';
+    ? 'Vic Data | Economía, datos y programación'
+    : heading.textContent + ' | Vic Data';
   if (moveFocus) {
     heading.tabIndex = -1;
     heading.focus({ preventScroll: true });
@@ -62,29 +62,22 @@ showView(false);
 
 const reportDialog = document.querySelector('#vista-reporte');
 const reportTitle = reportDialog.querySelector('h2');
-const reportExternal = reportDialog.querySelector('.report-external');
 const reportContent = reportDialog.querySelector('.report-content');
 
 if (typeof reportDialog.showModal === 'function') {
   for (const card of cards) {
-    const link = card.querySelector('.report-link');
+    const preview = card.querySelector('.report-preview');
     const title = card.querySelector('h2').textContent;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'button';
-    button.textContent = 'Ver aquí';
-    button.setAttribute('aria-label', 'Ver tablero aquí: ' + title);
-    button.addEventListener('click', () => {
+    preview.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
       reportTitle.textContent = title;
-      reportExternal.href = link.href;
-      const frame = document.createElement('iframe');
-      frame.title = title;
-      frame.src = link.href;
-      frame.allowFullscreen = true;
-      reportContent.replaceChildren(frame);
+      const image = document.createElement('img');
+      image.alt = 'Captura de ' + title;
+      image.src = preview.href;
+      reportContent.replaceChildren(image);
       reportDialog.showModal();
     });
-    card.querySelector('.report-actions').prepend(button);
   }
   reportDialog.addEventListener('close', () => reportContent.replaceChildren());
   window.addEventListener('hashchange', () => {
