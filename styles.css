@@ -117,7 +117,7 @@ blockquote { margin: 1.2rem 0 0; color: var(--muted); }
 .quote-window { margin-block: 1rem 1.5rem; }
 .quote-window .quotes { margin: 0; }
 .quote-window.can-scroll { overflow: hidden; }
-.quote-window.can-scroll .quote-track { display: flex; width: max-content; animation: quote-scroll 68s linear infinite; }
+.quote-window.can-scroll .quote-track { display: flex; width: max-content; animation: quote-scroll 36s linear infinite; }
 .quote-window.can-scroll .quotes { display: flex; gap: 1rem; padding-right: 1rem; }
 .quote-window.can-scroll .quotes article { width: min(380px, 78vw); }
 .quote-window.paused .quote-track { animation-play-state: paused; }
@@ -152,3 +152,26 @@ blockquote { margin: 1.2rem 0 0; color: var(--muted); }
 }
 .thesis-status { font-size: .85rem; }
 .thesis-status strong { color: var(--accent); }
+
+.quote-carousel { position: relative; }
+.quote-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #0a1320df;
+  color: var(--muted);
+  font: 1.85rem / 1 system-ui, sans-serif;
+  cursor: pointer;
+}
+.quote-prev { left: .35rem; }
+.quote-next { right: .35rem; }
+.quote-arrow:hover, .quote-arrow:focus-visible { color: var(--accent); border-color: var(--accent); }
+.quote-carousel.manual .quote-window { overflow-x: auto; }
+.quote-carousel.manual .quotes { display: flex; }
+.quote-carousel.manual .quotes article { flex: 0 0 min(380px, 78vw); }

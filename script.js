@@ -87,6 +87,7 @@ if (typeof reportDialog.showModal === 'function') {
 
 const quoteWindow = document.querySelector('.quote-window');
 const quoteTrack = quoteWindow.querySelector('.quote-track');
+const quoteCarousel = quoteWindow.closest('.quote-carousel');
 const quoteControls = document.querySelector('.quote-controls');
 const quoteButton = quoteControls.querySelector('button');
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -99,6 +100,7 @@ function syncQuotes() {
   const allowMotion = !motionPreference.matches;
   quoteWindow.classList.toggle('can-scroll', allowMotion);
   quoteCopy.hidden = !allowMotion;
+  quoteCarousel.classList.toggle('manual', !allowMotion);
   quoteControls.hidden = !allowMotion;
 }
 
@@ -109,3 +111,25 @@ quoteButton.addEventListener('click', () => {
 
 motionPreference.addEventListener('change', syncQuotes);
 syncQuotes();
+
+function moveQuote(direction) {
+  const firstGroup = quoteTrack.firstElementChild;
+  const firstCard = firstGroup.firstElementChild;
+  const step = firstCard.nextElementSibling.offsetLeft - firstCard.offsetLeft;
+  const animation = quoteTrack.getAnimations().find(item => item.animationName === 'quote-scroll');
+  if (!animation || !firstGroup.offsetWidth) {
+    quoteWindow.scrollBy({ left: direction * step, behavior: 'instant' });
+    return;
+  }
+
+  const duration = animation.effect.getTiming().duration;
+  const position = (animation.currentTime ?? 0) % duration;
+  const change = direction * duration * step / firstGroup.offsetWidth;
+  animation.currentTime = ((position + change) % duration + duration) % duration;
+}
+
+for (const [selector, direction] of [['.quote-prev', -1], ['.quote-next', 1]]) {
+  const arrow = quoteCarousel.querySelector(selector);
+  arrow.addEventListener('click', () => moveQuote(direction));
+  arrow.hidden = false;
+}
