@@ -15,7 +15,7 @@ body { margin: 0; background: radial-gradient(ellipse at 85% 1%, #153047 0%, tra
 a { color: var(--blue); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .wrap { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
-header { background: #0a1320; border-bottom: 1px solid var(--line); }
+header { position: sticky; top: 0; z-index: 10; background: #0a1320; border-bottom: 1px solid var(--line); }
 .header, nav, .footer, .footer div, .actions, .filters { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
 .header, .footer { justify-content: space-between; padding-block: 1rem; }
 .brand, nav a, .button { text-decoration: none; }
@@ -56,7 +56,7 @@ blockquote { margin: 1.2rem 0 0; color: var(--muted); }
 .service li + li { margin-top: .65rem; }
 .back { display: inline-block; margin-bottom: 1rem; }
 .footer { border-top: 1px solid var(--line); color: var(--muted); }
-.skip { position: absolute; top: .5rem; left: .5rem; padding: .5rem; background: var(--bg); transform: translateY(-160%); }
+.skip { z-index: 11; position: absolute; top: .5rem; left: .5rem; padding: .5rem; background: var(--bg); transform: translateY(-160%); }
 .skip:focus { transform: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
 @keyframes reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
