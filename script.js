@@ -65,15 +65,15 @@ const reportTitle = reportDialog.querySelector('h2');
 const reportContent = reportDialog.querySelector('.report-content');
 
 if (typeof reportDialog.showModal === 'function') {
-  for (const card of cards) {
-    const preview = card.querySelector('.report-preview');
-    const title = card.querySelector('h2').textContent;
+  for (const preview of document.querySelectorAll('.report-preview')) {
+    const title = preview.closest('article').querySelector('h2, h3').textContent;
+    const imageType = preview.classList.contains('thesis-preview') ? 'Portada' : 'Captura';
     preview.addEventListener('click', event => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       reportTitle.textContent = title;
       const image = document.createElement('img');
-      image.alt = 'Captura de ' + title;
+      image.alt = imageType + ' de ' + title;
       image.src = preview.href;
       reportContent.replaceChildren(image);
       reportDialog.showModal();
@@ -84,3 +84,28 @@ if (typeof reportDialog.showModal === 'function') {
     if (reportDialog.open) reportDialog.close();
   });
 }
+
+const quoteWindow = document.querySelector('.quote-window');
+const quoteTrack = quoteWindow.querySelector('.quote-track');
+const quoteControls = document.querySelector('.quote-controls');
+const quoteButton = quoteControls.querySelector('button');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const quoteCopy = quoteTrack.firstElementChild.cloneNode(true);
+quoteCopy.setAttribute('aria-hidden', 'true');
+quoteCopy.hidden = true;
+quoteTrack.append(quoteCopy);
+
+function syncQuotes() {
+  const allowMotion = !motionPreference.matches;
+  quoteWindow.classList.toggle('can-scroll', allowMotion);
+  quoteCopy.hidden = !allowMotion;
+  quoteControls.hidden = !allowMotion;
+}
+
+quoteButton.addEventListener('click', () => {
+  const paused = quoteWindow.classList.toggle('paused');
+  quoteButton.textContent = paused ? 'Reanudar desplazamiento' : 'Pausar desplazamiento';
+});
+
+motionPreference.addEventListener('change', syncQuotes);
+syncQuotes();
