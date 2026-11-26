@@ -175,3 +175,24 @@ blockquote { margin: 1.2rem 0 0; color: var(--muted); }
 .quote-carousel.manual .quote-window { overflow-x: auto; }
 .quote-carousel.manual .quotes { display: flex; }
 .quote-carousel.manual .quotes article { flex: 0 0 min(380px, 78vw); }
+
+.header-contact { display: flex; flex-wrap: wrap; gap: .55rem; }
+.header-contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .42rem;
+  min-height: 44px;
+  padding: .4rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: var(--panel);
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.header-contact a:hover { border-color: currentColor; }
+.header-contact svg { width: 1.12rem; height: 1.12rem; }
+.contact-whatsapp svg { color: #72e5a4; }
+.contact-linkedin svg { color: #82baff; }
