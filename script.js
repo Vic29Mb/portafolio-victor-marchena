@@ -176,27 +176,3 @@ document.addEventListener('keydown', event => {
     profileSummary.focus();
   }
 });
-
-const demoArea = document.querySelector('#demo-area');
-const demoSummary = document.querySelector('#demo-summary strong');
-const demoRows = [...document.querySelectorAll('.demo-row')];
-const demoCounts = {
-  todas: [16, 9, 5],
-  logistica: [7, 4, 2],
-  infraestructura: [5, 3, 2],
-  administracion: [4, 2, 1]
-};
-
-function renderDemo() {
-  const counts = demoCounts[demoArea.value];
-  const total = counts.reduce((sum, count) => sum + count, 0);
-  demoSummary.textContent = total + ' contrataciones';
-  for (const [index, row] of demoRows.entries()) {
-    const meter = row.querySelector('meter');
-    meter.max = total;
-    meter.value = counts[index];
-    row.querySelector('output').value = String(counts[index]);
-  }
-}
-demoArea.addEventListener('change', renderDemo);
-renderDemo();
