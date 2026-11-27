@@ -7,7 +7,9 @@ function showView(moveFocus) {
   const legacyRoutes = { proyectos: 'tableros', docencia: 'academy' };
   const viewId = Object.hasOwn(legacyRoutes, route) ? legacyRoutes[route] : route;
   const activeView = views.find(view => view.id === viewId) ?? views[0];
-  const activeNav = serviceViews.has(activeView.id) ? 'servicios' : activeView.id;
+  let activeNav = activeView.id;
+  if (serviceViews.has(activeNav)) activeNav = 'servicios';
+  if (activeNav.startsWith('caso-')) activeNav = 'casos';
 
   for (const view of views) {
     const isActive = view === activeView;
@@ -66,7 +68,7 @@ const reportContent = reportDialog.querySelector('.report-content');
 
 if (typeof reportDialog.showModal === 'function') {
   for (const preview of document.querySelectorAll('.report-preview')) {
-    const title = preview.closest('article').querySelector('h2, h3').textContent;
+    const title = preview.closest('article')?.querySelector('h2, h3')?.textContent ?? preview.getAttribute('aria-label').replace('Ampliar captura', 'Captura');
     const imageType = preview.classList.contains('thesis-preview') ? 'Portada' : 'Captura';
     preview.addEventListener('click', event => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -133,3 +135,26 @@ for (const [selector, direction] of [['.quote-prev', -1], ['.quote-next', 1]]) {
   arrow.addEventListener('click', () => moveQuote(direction));
   arrow.hidden = false;
 }
+
+const menuButton = document.querySelector('.menu-toggle');
+const compactHeader = window.matchMedia('(max-width: 900px)');
+
+function closeCompactMenu() {
+  menuButton.hidden = !compactHeader.matches;
+  menuButton.setAttribute('aria-expanded', 'false');
+  navigation.hidden = compactHeader.matches;
+}
+
+menuButton.addEventListener('click', () => {
+  const expand = menuButton.getAttribute('aria-expanded') === 'false';
+  menuButton.setAttribute('aria-expanded', String(expand));
+  navigation.hidden = !expand;
+});
+navigation.addEventListener('click', event => {
+  if (compactHeader.matches && event.target.closest('a')) {
+    closeCompactMenu();
+    menuButton.focus();
+  }
+});
+compactHeader.addEventListener('change', closeCompactMenu);
+closeCompactMenu();

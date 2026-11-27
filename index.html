@@ -14,8 +14,9 @@
   <header>
     <div class="wrap header">
       <a class="brand" href="#inicio"><img src="assets/vic-data.svg" width="42" height="42" alt=""> Vic Data</a>
-      <nav aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#experiencia">Experiencia</a><a href="#formacion">Formación</a><a href="#tableros">Tableros</a><a href="#tesis">Tesis</a><a href="#servicios">Servicios</a>
+      <button type="button" class="menu-toggle button" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+      <nav id="menu-principal" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#casos">Casos</a><a href="#tableros">Tableros</a><a href="#experiencia">Experiencia</a><a href="#tesis">Investigación</a><a href="#sobre-mi">Sobre mí</a><a href="#formacion">Formación</a>
       </nav>
       <div class="header-contact" role="group" aria-label="Canales de contacto">
         <a class="contact-whatsapp" href="https://w.app/vicdata">
@@ -30,57 +31,41 @@
     </div>
   </header>
   <main class="wrap" id="contenido" tabindex="-1">
-    <section class="view hero" id="inicio" aria-labelledby="titulo-inicio">
-      <div>
-        <p class="eyebrow">Economista colegiado · Consultor · Docente</p>
-        <h1 id="titulo-inicio">Vic Data<span>.</span></h1>
-        <p class="lead">Combino economía y programación para analizar datos, construir tableros y automatizar procesos.</p>
-        <div class="actions">
-          <a class="button primary" href="#tableros">Explorar tableros <span aria-hidden="true">↗</span></a>
-          <a class="button" href="#servicios">Ver servicios METANOIA</a>
-          <a class="button" href="#sobre-mi">Sobre mí</a>
+    <section class="view" id="inicio" aria-labelledby="titulo-inicio">
+      <div class="hero commercial-hero">
+        <div>
+          <p class="eyebrow">Economía aplicada · Datos · Programación</p>
+          <h1 id="titulo-inicio">Dashboards, reportes automatizados y análisis para tomar decisiones</h1>
+          <p class="lead">Ayudo a empresas y equipos públicos a ordenar sus datos, monitorear indicadores y automatizar reportes. También asesoro a profesionales y tesistas en estadística y econometría aplicada.</p>
+          <div class="actions"><a class="button primary" href="https://w.app/vicdata">Cuéntame tu proyecto</a><a class="button" href="#casos">Ver casos de trabajo</a></div>
         </div>
+        <figure class="hero-chart">
+          <a class="report-preview" href="assets/tablero-27.webp" aria-label="Ampliar captura del tablero DS 096"><img src="assets/tablero-27.webp" alt="Captura del tablero de seguimiento de intervenciones DS 096"></a>
+          <figcaption>ANIN · Seguimiento semanal de intervenciones DS 096</figcaption>
+        </figure>
       </div>
-      <figure class="hero-chart">
-        <svg viewBox="0 0 360 246" role="img" aria-label="Gráfico conceptual de barras y tendencia entre llaves">
-          <g fill="none" stroke="#2a4560"><path d="M54 45H306 M54 86H306 M54 127H306 M54 168H306 M54 209H306"/><path d="M54 45V209 M117 45V209 M180 45V209 M243 45V209 M306 45V209"/></g>
-          <g fill="#234c67"><rect x="75" y="158" width="30" height="51" rx="3"/><rect x="135" y="132" width="30" height="77" rx="3"/><rect x="195" y="107" width="30" height="102" rx="3"/><rect x="255" y="79" width="30" height="130" rx="3"/></g>
-          <path d="M90 140L150 106L210 119L270 61" fill="none" stroke="#7df3cb" stroke-width="3"/>
-          <g fill="#7df3cb"><circle cx="90" cy="140" r="5"/><circle cx="150" cy="106" r="5"/><circle cx="210" cy="119" r="5"/><circle cx="270" cy="61" r="5"/></g>
-          <g fill="none" stroke="#a4c9ff" stroke-width="2"><path d="M43 30H37Q29 30 29 39V108Q29 122 17 122Q29 122 29 136V205Q29 214 37 214H43"/><path d="M317 30H323Q331 30 331 39V108Q331 122 343 122Q331 122 331 136V205Q331 214 323 214H317"/></g>
-        </svg>
-        <figcaption>Econometría <span>+</span> Inteligencia de negocios <span>+</span> Automatización</figcaption>
-      </figure>
-      <div class="tech">
-        <h2>Herramientas y lenguajes</h2>
-        <ul class="tech-list">
-          <li><img src="assets/herramienta-01.webp" alt="" decoding="async">Microsoft Excel</li>
-          <li><img src="assets/herramienta-02.webp" alt="" decoding="async">SQL Server</li>
-          <li><img src="assets/herramienta-03.webp" alt="" decoding="async">Oracle Database</li>
-          <li><img src="assets/herramienta-04.webp" alt="" decoding="async">Stata</li>
-          <li><img src="assets/herramienta-05.webp" alt="" decoding="async">Power BI</li>
-          <li><img src="assets/herramienta-06.webp" alt="" decoding="async">Python</li>
-          <li><img src="assets/herramienta-07.webp" alt="" decoding="async">R</li>
-          <li><img src="assets/herramienta-08.webp" alt="" decoding="async">EViews 14</li>
-          <li><img src="assets/herramienta-09.webp" alt="" decoding="async">Bizagi</li>
-          <li><img src="assets/herramienta-10.webp" alt="" decoding="async">Google Workspace</li>
-          <li><img src="assets/herramienta-11.webp" alt="" decoding="async">Google Apps Script</li>
-          <li><img src="assets/herramienta-12.webp" alt="" decoding="async">Google Drive</li>
-          <li><img src="assets/herramienta-13.webp" alt="" decoding="async">Looker Studio</li>
-          <li><img src="assets/herramienta-14.webp" alt="" decoding="async">Microsoft OneDrive</li>
-          <li><img src="assets/herramienta-15.webp" alt="" decoding="async">Microsoft SharePoint</li>
-          <li><img src="assets/herramienta-16.webp" alt="" decoding="async">Microsoft Azure</li>
-        </ul>
-      </div>
+      <section class="home-block" aria-labelledby="oferta-inicio">
+        <h2 id="oferta-inicio">Servicios METANOIA</h2>
+        <div class="grid"><article><p class="eyebrow">METANOIA Data Solutions</p><h3>Dashboards e indicadores para equipos</h3><p>Integro bases dispersas y preparo modelos, indicadores y tableros en Power BI.</p><a href="#data-solutions">Solicitar un tablero ↗</a></article><article><p class="eyebrow">METANOIA Automation</p><h3>Automatización de reportes</h3><p>Consolido archivos y automatizo formularios, controles y reportes recurrentes.</p><a href="#automation">Automatizar un proceso ↗</a></article><article><p class="eyebrow">METANOIA Research</p><h3>Asesoría en investigación y econometría</h3><p>Acompaño a profesionales y tesistas en el diseño, análisis e interpretación de estudios.</p><a href="#research">Consultar por asesoría ↗</a></article></div>
+        <a class="button" href="#servicios">Ver los cinco servicios</a>
+      </section>
+      <section class="home-block" aria-labelledby="trabajos-inicio">
+        <h2 id="trabajos-inicio">Proyectos destacados</h2>
+        <p>27 tableros desarrollados en cuatro instituciones públicas. Conoce también mi trabajo en automatización y en supervisiones nacionales.</p>
+        <div class="grid home-cases">
+          <a href="#caso-ds096">ANIN <span>Seguimiento de intervenciones DS 096 ↗</span></a>
+          <a href="#caso-calidad">MINSA <span>Indicadores de calidad en salud ↗</span></a>
+          <a href="#caso-defensoria">Defensoría del Pueblo <span>Supervisión nacional penitenciaria ↗</span></a>
+        </div>
+      </section>
     </section>
     <section class="view" id="sobre-mi" aria-labelledby="titulo-sobre">
       <div class="about">
         <img class="portrait" src="assets/retrato.webp" alt="Retrato de Vic Data" width="400" height="400">
         <div>
           <h1 id="titulo-sobre">Sobre mí</h1>
-          <p class="bio-paragraph">Soy Victor Marchena Bautista, economista de profesión y programador por vocación. Estudié Economía Pura en la Universidad Nacional del Callao, donde quedé entre los tres primeros de mi promoción. Me especialicé en econometría aplicada con Stata y en análisis de datos con Power BI. Actualmente curso la Maestría en Análisis y Visualización de Datos Masivos en UNIR México.</p>
-          <p class="bio-paragraph">Inicié mi carrera como asistente de datos e inversiones y luego me desempeñé como analista de datos en la Defensoría del Pueblo, especialista en gestión de la información en el MINSA y consultor en la Autoridad Nacional de Infraestructura. También he desarrollado tableros e indicadores para SALUDPOL y SENAMHI.</p>
-          <p class="bio-paragraph">Como Vic Data, combino mi trabajo de consultoría con la docencia y la asesoría de tesis. Mi trabajo abarca desde preparar y modelar bases de datos hasta interpretar resultados, automatizar reportes y explicar los hallazgos a quienes toman decisiones.</p>
+          <p class="bio-paragraph">Soy Victor Marchena Bautista, economista y fundador de Vic Data. Trabajo con equipos que necesitan ordenar sus datos, automatizar reportes o entender qué dicen sus indicadores. La economía me ayuda a formular las preguntas y la programación me permite llevar el análisis a un tablero, un reporte o un proceso que el equipo pueda usar.</p>
+          <p class="bio-paragraph">Estudié Economía Pura en la Universidad Nacional del Callao, donde quedé entre los tres primeros de mi promoción. Actualmente curso una maestría en Análisis y Visualización de Datos Masivos en UNIR México. También dicto clases y asesoro investigaciones y tesis en estadística y econometría aplicada.</p>
           <div class="actions"><a class="button primary" href="#experiencia">Ver experiencia</a><a class="button" href="#formacion">Ver formación</a></div>
         </div>
       </div>
@@ -111,17 +96,57 @@
         <article><h3>Automatización y desarrollo</h3><p>Excel avanzado, formularios, macros y VBA. Conocimientos básicos de HTML, CSS y JavaScript para visualización y personalización de reportes. Organización de repositorios en OneDrive y Google Drive.</p></article>
         <article><h3>Competencias profesionales e idiomas</h3><p>Pensamiento analítico, comunicación de resultados a públicos técnicos y no técnicos, trabajo en equipo, docencia y transferencia de conocimientos. Inglés intermedio y japonés básico.</p></article>
       </div>
+      <div class="tech">
+        <h2>Herramientas y lenguajes</h2>
+        <ul class="tech-list">
+          <li><img src="assets/herramienta-01.webp" alt="" decoding="async">Microsoft Excel</li>
+          <li><img src="assets/herramienta-02.webp" alt="" decoding="async">SQL Server</li>
+          <li><img src="assets/herramienta-03.webp" alt="" decoding="async">Oracle Database</li>
+          <li><img src="assets/herramienta-04.webp" alt="" decoding="async">Stata</li>
+          <li><img src="assets/herramienta-05.webp" alt="" decoding="async">Power BI</li>
+          <li><img src="assets/herramienta-06.webp" alt="" decoding="async">Python</li>
+          <li><img src="assets/herramienta-07.webp" alt="" decoding="async">R</li>
+          <li><img src="assets/herramienta-08.webp" alt="" decoding="async">EViews 14</li>
+          <li><img src="assets/herramienta-09.webp" alt="" decoding="async">Bizagi</li>
+          <li><img src="assets/herramienta-10.webp" alt="" decoding="async">Google Workspace</li>
+          <li><img src="assets/herramienta-11.webp" alt="" decoding="async">Google Apps Script</li>
+          <li><img src="assets/herramienta-12.webp" alt="" decoding="async">Google Drive</li>
+          <li><img src="assets/herramienta-13.webp" alt="" decoding="async">Looker Studio</li>
+          <li><img src="assets/herramienta-14.webp" alt="" decoding="async">Microsoft OneDrive</li>
+          <li><img src="assets/herramienta-15.webp" alt="" decoding="async">Microsoft SharePoint</li>
+          <li><img src="assets/herramienta-16.webp" alt="" decoding="async">Microsoft Azure</li>
+        </ul>
+      </div>
     </section>
     <section class="view" id="experiencia" aria-labelledby="titulo-experiencia">
       <h1 id="titulo-experiencia">Experiencia</h1>
-      <p class="lead">Más de cinco años de experiencia en análisis de datos e inteligencia de negocios. Maestría en Análisis y Visualización de Datos Masivos, en curso.</p>
-      <div class="grid">
-        <article><p class="eyebrow">ANIN</p><h2>Seguimiento de adquisiciones</h2><p>Automaticé la consolidación del reporte semanal del DS 096 y desarrollé un tablero con estados, fechas y montos.</p><p class="tools">Power BI · DAX · Office Scripts</p></article>
-        <article><p class="eyebrow">MINSA</p><h2>Calidad en salud</h2><p>Estandaricé bases de asistencias técnicas y seguridad del paciente, y diseñé un tablero para el seguimiento de indicadores.</p><p class="tools">Power BI · Excel · Stata</p></article>
-        <article><p class="eyebrow">SALUDPOL</p><h2>Gestión de prestaciones</h2><p>Integré indicadores de ocho áreas en el Tablero Integrado de Control y desarrollé modelos de datos y medidas de gestión.</p><p class="tools">Power BI · PostgreSQL · DAX</p></article>
-        <article><p class="eyebrow">Defensoría del Pueblo</p><h2>Supervisiones nacionales</h2><p>Depuré y analicé datos de supervisiones y elaboré indicadores y tableros para informes defensoriales.</p><p class="tools">Stata · Oracle SQL · Power BI</p></article>
-        <article><p class="eyebrow">SENAMHI</p><h2>Red de estaciones meteorológicas</h2><p>Implementé una herramienta de monitoreo de más de 500 estaciones y capacité al personal en el uso del tablero.</p><p class="tools">Power BI · Mapas · Modelado de datos</p></article>
-        <article><p class="eyebrow">Docencia</p><h2>Excel, VBA y Power BI</h2><p>He impartido capacitación práctica en análisis, automatización y diseño de tableros, con ejercicios orientados al trabajo de cada participante.</p><a href="#academy">Ver cursos y clases ↗</a></article>
+      <p class="lead">Trayectoria en análisis de datos, gestión de información e inteligencia de negocios.</p>
+      <ol class="timeline"><li><p class="eyebrow">Oct 2026 – actualidad · ANIN</p><h2>Consultor en análisis, seguimiento y gestión de información</h2><details><summary>Seguimiento de adquisiciones</summary><p>Automaticé la consolidación del reporte semanal del DS 096 y desarrollé un tablero con estados, fechas y montos.</p><p class="tools">Power BI · DAX · Office Scripts</p><p><a href="#caso-ds096">Ver caso ↗</a></p></details></li><li><p class="eyebrow">Feb – mar 2026 · SENAMHI</p><h2>Especialista en visualización de indicadores</h2><details><summary>Red de estaciones meteorológicas</summary><p>Implementé una herramienta de monitoreo de más de 500 estaciones y capacité al personal en el uso del tablero.</p><p class="tools">Power BI · Mapas · Modelado de datos</p></details></li><li><p class="eyebrow">Nov 2025 – feb 2026 · SALUDPOL</p><h2>Especialista en análisis de datos</h2><details><summary>Gestión de prestaciones</summary><p>Integré indicadores de ocho áreas en el Tablero Integrado de Control y desarrollé modelos de datos y medidas de gestión.</p><p class="tools">Power BI · PostgreSQL · DAX</p></details></li><li><p class="eyebrow">Mar 2025 – actualidad · MINSA</p><h2>Especialista en gestión de la información</h2><details><summary>Calidad en salud</summary><p>Estandaricé bases de asistencias técnicas y seguridad del paciente, y diseñé un tablero para el seguimiento de indicadores.</p><p class="tools">Power BI · Excel · Stata</p><p><a href="#caso-calidad">Ver caso ↗</a></p></details></li><li><p class="eyebrow">Sep 2023 – feb 2025 · Defensoría del Pueblo</p><h2>Analista de datos</h2><details><summary>Supervisiones nacionales</summary><p>Depuré y analicé datos de supervisiones y elaboré indicadores y tableros para informes defensoriales.</p><p class="tools">Stata · Oracle SQL · Power BI</p><p><a href="#caso-defensoria">Ver caso ↗</a></p></details></li><li><p class="eyebrow">2022 – 2023 · Sector privado</p><h2>Analista BI</h2><details><summary>Reportes y automatización</summary><p>Desarrollé reportes y automatizaciones para equipos de gestión.</p></details></li><li><p class="eyebrow">2021 – 2022</p><h2>Asistente de datos e inversiones</h2><details><summary>Procesamiento y organización de datos</summary><p>Apoyé la preparación de bases de datos e información para proyectos de inversión.</p></details></li></ol>
+      <article><p class="eyebrow">Docencia</p><h2>Excel, VBA y Power BI</h2><p>He impartido capacitación práctica en análisis, automatización y diseño de tableros, con ejercicios orientados al trabajo de cada participante.</p><a href="#academy">Ver cursos y clases ↗</a></article>
+    </section>
+    <section class="view" id="casos" aria-labelledby="titulo-casos"><h1 id="titulo-casos">Casos de trabajo</h1><div class="grid"><article><p class="eyebrow">ANIN</p><h2>Seguimiento de intervenciones DS 096</h2><p>Un reporte semanal consolidado y una vista centralizada de seguimiento.</p><a href="#caso-ds096">Ver el caso ↗</a></article><article><p class="eyebrow">MINSA</p><h2>Indicadores de calidad en salud</h2><p>Indicadores centralizados para consultar avances y brechas. La captura muestra uno de los tableros de la línea de calidad.</p><a href="#caso-calidad">Ver el caso ↗</a></article><article><p class="eyebrow">Defensoría del Pueblo</p><h2>Supervisión nacional a establecimientos penitenciarios</h2><p>Mi contribución técnica quedó acreditada en la página 2 del Informe Defensorial n.º 216.</p><a href="#caso-defensoria">Ver el caso ↗</a></article></div></section>
+    <section class="view case-view" id="caso-ds096" aria-labelledby="titulo-ds096">
+      <a class="back" href="#casos">← Todos los casos</a>
+      <p class="eyebrow">ANIN</p><h1 id="titulo-ds096">Seguimiento de intervenciones DS 096</h1>
+      <div class="case-layout">
+        <div><h2>Necesidad</h2><p>La Dirección necesitaba consolidar el seguimiento semanal de intervenciones.</p><h2>Mi aporte</h2><p>Automaticé la consolidación con Excel y Office Scripts, y desarrollé un tablero en Power BI para consultar estados, fechas y montos.</p><h2>Entregable</h2><p>Un reporte semanal consolidado y una vista centralizada de seguimiento.</p><p><a href="#automation">Ver automatización de procesos ↗</a></p></div>
+        <a class="report-preview" href="assets/tablero-27.webp" aria-label="Ampliar captura de Seguimiento de intervenciones DS 096"><img src="assets/tablero-27.webp" alt="Captura del tablero de ANIN" loading="lazy"><span>Ampliar captura ↗</span></a>
+      </div>
+    </section>
+    <section class="view case-view" id="caso-calidad" aria-labelledby="titulo-calidad">
+      <a class="back" href="#casos">← Todos los casos</a>
+      <p class="eyebrow">MINSA</p><h1 id="titulo-calidad">Indicadores de calidad en salud</h1>
+      <div class="case-layout">
+        <div><h2>Necesidad</h2><p>El seguimiento requería integrar fuentes de calidad en salud, asistencias técnicas y seguridad del paciente.</p><h2>Mi aporte</h2><p>Estandaricé bases y diseñé tableros e indicadores en Power BI para su seguimiento.</p><h2>Entregable</h2><p>Indicadores centralizados para consultar avances y brechas. La captura muestra uno de los tableros de la línea de calidad.</p><p><a href="#data-solutions">Ver servicios de Power BI ↗</a></p></div>
+        <a class="report-preview" href="assets/tablero-22.webp" aria-label="Ampliar captura de Indicadores de calidad en salud"><img src="assets/tablero-22.webp" alt="Captura del tablero de MINSA" loading="lazy"><span>Ampliar captura ↗</span></a>
+      </div>
+    </section>
+    <section class="view case-view" id="caso-defensoria" aria-labelledby="titulo-defensoria">
+      <a class="back" href="#casos">← Todos los casos</a>
+      <p class="eyebrow">Defensoría del Pueblo</p><h1 id="titulo-defensoria">Supervisión nacional a establecimientos penitenciarios</h1>
+      <div class="case-layout">
+        <div><h2>Necesidad</h2><p>La supervisión nacional requería organizar los datos de los establecimientos y preparar insumos estadísticos.</p><h2>Mi aporte</h2><p>Como parte del equipo de la Oficina de Gobierno Digital, Proyectos y Tecnologías de la Información, contribuí a la información estadística y al diseño de la base de datos.</p><h2>Entregable</h2><p>Mi contribución técnica quedó acreditada en la página 2 del Informe Defensorial n.º 216.</p><p><a href="https://www.defensoria.gob.pe/wp-content/uploads/2024/07/Informe-Defensorial-216-Derechos-Humanos-PPL.pdf#page=2" target="_blank" rel="noopener noreferrer">Ver créditos del Informe 216 ↗</a> · <a href="https://www.defensoria.gob.pe/wp-content/uploads/2024/06/id_rompiendo_cadenas.pdf" target="_blank" rel="noopener noreferrer">Leer Rompiendo Cadenas ↗</a></p></div>
+        <a class="report-preview" href="assets/tablero-07.webp" aria-label="Ampliar captura de Supervisión nacional a establecimientos penitenciarios"><img src="assets/tablero-07.webp" alt="Captura del tablero de Defensoría del Pueblo" loading="lazy"><span>Ampliar captura ↗</span></a>
       </div>
     </section>
     <section class="view" id="tableros" aria-labelledby="titulo-tableros">
@@ -376,7 +401,8 @@
       <p id="resultado-filtro" class="sr-only" role="status"></p>
     </section>
     <section class="view" id="tesis" aria-labelledby="titulo-tesis">
-      <h1 id="titulo-tesis">Investigación y asesoría de tesis</h1>
+      <h1 id="titulo-tesis">Investigación y publicaciones</h1>
+      <p class="lead">Mi tesis, colaboraciones técnicas en publicaciones institucionales y asesoría de investigaciones de pregrado y posgrado.</p>
       <section class="research-group">
         <h2>Mi tesis</h2>
         <div class="grid">
@@ -384,10 +410,10 @@
         </div>
       </section>
       <section class="research-group">
-        <h2>Colaboración técnica en informes defensoriales</h2>
+        <h2>Publicaciones institucionales · Colaboración técnica</h2>
         <div class="grid">
-          <article><a class="report-preview thesis-preview" href="assets/portada-02.webp" aria-label="Ampliar portada: Construyendo un futuro mejor para la niñez, la adolescencia y la juventud en el Perú: Rompiendo Cadenas en las cárceles"><img src="assets/portada-02-mini.webp" alt="" width="365" height="460" loading="lazy" decoding="async"><span>Ampliar portada ↗</span></a><h3>Construyendo un futuro mejor para la niñez, la adolescencia y la juventud en el Perú: Rompiendo Cadenas en las cárceles</h3><p>Defensoría del Pueblo · 2024 · Preparación de información estadística y diseño de la base de datos.</p><a href="https://acortar.link/lXGQE8" target="_blank" rel="noopener noreferrer">Ver informe ↗</a></article>
-          <article><a class="report-preview thesis-preview" href="assets/portada-03.webp" aria-label="Ampliar portada: Derechos Humanos de los internos e internas de los 68 establecimientos penitenciarios del país"><img src="assets/portada-03-mini.webp" alt="" width="365" height="460" loading="lazy" decoding="async"><span>Ampliar portada ↗</span></a><h3>Derechos Humanos de los internos e internas de los 68 establecimientos penitenciarios del país</h3><p>Defensoría del Pueblo · 2024 · Preparación de información estadística y diseño de la base de datos.</p><a href="https://acortar.link/VOXW08" target="_blank" rel="noopener noreferrer">Ver informe ↗</a></article>
+          <article><a class="report-preview thesis-preview" href="assets/portada-02.webp" aria-label="Ampliar portada: Construyendo un futuro mejor para la niñez, la adolescencia y la juventud en el Perú: Rompiendo Cadenas en las cárceles"><img src="assets/portada-02-mini.webp" alt="" width="365" height="460" loading="lazy" decoding="async"><span>Ampliar portada ↗</span></a><h3>Construyendo un futuro mejor para la niñez, la adolescencia y la juventud en el Perú: Rompiendo Cadenas en las cárceles</h3><p>Defensoría del Pueblo · 2024 · Preparación de información estadística y diseño de la base de datos.</p><a href="https://www.defensoria.gob.pe/wp-content/uploads/2024/06/id_rompiendo_cadenas.pdf" target="_blank" rel="noopener noreferrer">Ver informe ↗</a></article>
+          <article><a class="report-preview thesis-preview" href="assets/portada-03.webp" aria-label="Ampliar portada: Derechos Humanos de los internos e internas de los 68 establecimientos penitenciarios del país"><img src="assets/portada-03-mini.webp" alt="" width="365" height="460" loading="lazy" decoding="async"><span>Ampliar portada ↗</span></a><h3>Derechos Humanos de los internos e internas de los 68 establecimientos penitenciarios del país</h3><p>Defensoría del Pueblo · 2024 · Preparación de información estadística y diseño de la base de datos.</p><a href="https://www.defensoria.gob.pe/wp-content/uploads/2024/07/Informe-Defensorial-216-Derechos-Humanos-PPL.pdf#page=2" target="_blank" rel="noopener noreferrer">Ver informe ↗</a></article>
         </div>
       </section>
       <section class="research-group">
@@ -462,9 +488,9 @@
       <h1 id="titulo-servicios">Servicios METANOIA</h1>
       <p class="lead">Servicios de Vic Data en investigación, análisis de datos, automatización, formación y consultoría.</p>
       <div class="grid">
-        <article><a class="service-image" href="#research" tabindex="-1" aria-hidden="true"><img src="assets/servicio-research.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Research</p><h2>Investigación y asesoría de tesis</h2><p>Metodología, análisis estadístico y econometría aplicada.</p><a href="#research">Explorar Research ↗</a></article>
         <article><a class="service-image" href="#data-solutions" tabindex="-1" aria-hidden="true"><img src="assets/servicio-data-solutions.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Data Solutions</p><h2>Análisis de datos y Power BI</h2><p>Bases de datos, indicadores y tableros interactivos.</p><a href="#data-solutions">Explorar Data Solutions ↗</a></article>
         <article><a class="service-image" href="#automation" tabindex="-1" aria-hidden="true"><img src="assets/servicio-automation.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Automation</p><h2>Automatización de procesos</h2><p>Reportes, formularios y flujos de trabajo repetitivos.</p><a href="#automation">Explorar Automation ↗</a></article>
+        <article><a class="service-image" href="#research" tabindex="-1" aria-hidden="true"><img src="assets/servicio-research.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Research</p><h2>Investigación y asesoría de tesis</h2><p>Metodología, análisis estadístico y econometría aplicada.</p><a href="#research">Explorar Research ↗</a></article>
         <article><a class="service-image" href="#academy" tabindex="-1" aria-hidden="true"><img src="assets/servicio-academy.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Academy</p><h2>Cursos y capacitación</h2><p>Clases personalizadas de software estadístico, análisis de datos y BI.</p><a href="#academy">Explorar Academy ↗</a></article>
         <article><a class="service-image" href="#consulting" tabindex="-1" aria-hidden="true"><img src="assets/servicio-consulting.webp" alt="" loading="lazy" decoding="async"></a><p class="eyebrow">METANOIA Consulting</p><h2>Consultoría integral</h2><p>Proyectos que combinan investigación, indicadores, BI y automatización.</p><a href="#consulting">Explorar Consulting ↗</a></article>
       </div>
@@ -472,17 +498,20 @@
     <section class="view service" id="research" aria-labelledby="titulo-research">
       <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Research</p><h1 id="titulo-research">Investigación y asesoría de tesis</h1>
       <ul><li>Diseño metodológico, formulación de preguntas y operacionalización de variables.</li><li>Preparación de bases, análisis estadístico y estimación de modelos econométricos.</li><li>Interpretación de resultados y acompañamiento para preparar la sustentación.</li></ul>
-      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Research en WhatsApp">Consultar por WhatsApp</a><a class="button" href="#tesis">Ver agradecimientos</a></div>
+      <p class="muted">Indica tu tema, en qué etapa estás y qué ayuda necesitas con la metodología o el análisis.</p>
+      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Research en WhatsApp">Consultar por asesoría por WhatsApp</a><a class="button" href="#tesis">Ver agradecimientos</a></div>
     </section>
     <section class="view service" id="data-solutions" aria-labelledby="titulo-data">
       <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Data Solutions</p><h1 id="titulo-data">Análisis de datos y Power BI</h1>
       <ul><li>Consolidación, depuración y modelado de bases de datos.</li><li>Diseño de indicadores, medidas DAX y transformaciones con Power Query.</li><li>Tableros interactivos, documentación y transferencia al equipo usuario.</li></ul>
-      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Data Solutions en WhatsApp">Consultar por WhatsApp</a><a class="button" href="#tableros">Ver tableros</a></div>
+      <p class="muted">Comparte las fuentes disponibles, los indicadores que necesitas y quién usará el tablero.</p>
+      <div class="actions"><a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Data Solutions en WhatsApp">Solicitar un tablero por WhatsApp</a><a class="button" href="#tableros">Ver tableros</a></div>
     </section>
     <section class="view service" id="automation" aria-labelledby="titulo-automation">
       <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Automation</p><h1 id="titulo-automation">Automatización de procesos</h1>
       <ul><li>Formularios de registro con validación de datos.</li><li>Consolidación de archivos y generación de reportes periódicos.</li><li>Flujos a medida con Excel VBA, Office Scripts, Google Sheets y Apps Script.</li></ul>
-      <a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Automation en WhatsApp">Consultar por WhatsApp</a>
+      <p class="muted">Cuéntame cómo se hace hoy la tarea, con qué frecuencia y qué resultado esperas.</p>
+      <a class="button primary" href="https://w.app/vicdata" aria-label="Consultar por Automation en WhatsApp">Automatizar un proceso por WhatsApp</a>
     </section>
     <section class="view service" id="academy" aria-labelledby="titulo-academy">
       <a class="back" href="#servicios">← Todos los servicios</a><p class="eyebrow">METANOIA Academy</p><h1 id="titulo-academy">Cursos y capacitación</h1>
