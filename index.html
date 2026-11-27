@@ -4,7 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Vic Data, economista colegiado, consultor de datos y docente. Portafolio y servicios METANOIA.">
-  <title>Vic Data | Economía, datos y programación</title>
+  <title>Vic Data | Power BI, automatización y econometría</title>
+  <meta name="theme-color" content="#f4f7f3">
+  <link rel="canonical" href="https://portafolio-victor-marchena.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vic Data | Power BI, automatización y econometría">
+  <meta property="og:description" content="Casos de trabajo y servicios de Victor Marchena Bautista, economista y consultor de datos.">
+  <meta property="og:url" content="https://portafolio-victor-marchena.netlify.app/">
+  <meta property="og:image" content="https://portafolio-victor-marchena.netlify.app/assets/tablero-27.webp">
   <link rel="icon" type="image/svg+xml" href="assets/vic-data.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -16,7 +23,15 @@
       <a class="brand" href="#inicio"><img src="assets/vic-data.svg" width="42" height="42" alt=""> Vic Data</a>
       <button type="button" class="menu-toggle button" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
       <nav id="menu-principal" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#casos">Casos</a><a href="#tableros">Tableros</a><a href="#experiencia">Experiencia</a><a href="#tesis">Investigación</a><a href="#sobre-mi">Sobre mí</a><a href="#formacion">Formación</a>
+        <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#casos">Casos</a><a href="#tableros">Tableros</a><a href="#tesis">Investigación</a>
+        <details class="about-menu">
+          <summary>Sobre mí <span aria-hidden="true">⌄</span></summary>
+          <div class="about-menu-panel">
+            <a href="#sobre-mi">Perfil</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#formacion">Formación</a>
+          </div>
+        </details>
       </nav>
       <div class="header-contact" role="group" aria-label="Canales de contacto">
         <a class="contact-whatsapp" href="https://w.app/vicdata">
@@ -34,14 +49,15 @@
     <section class="view" id="inicio" aria-labelledby="titulo-inicio">
       <div class="hero commercial-hero">
         <div>
-          <p class="eyebrow">Economía aplicada · Datos · Programación</p>
-          <h1 id="titulo-inicio">Dashboards, reportes automatizados y análisis para tomar decisiones</h1>
-          <p class="lead">Ayudo a empresas y equipos públicos a ordenar sus datos, monitorear indicadores y automatizar reportes. También asesoro a profesionales y tesistas en estadística y econometría aplicada.</p>
+          <p class="eyebrow">Victor Marchena Bautista · Economista y consultor de datos</p>
+          <h1 id="titulo-inicio">Datos ordenados.<br><span>Decisiones claras.</span></h1>
+          <p class="lead">Diseño tableros en Power BI, automatizo reportes y aplico econometría para que equipos y profesionales puedan entender sus datos y actuar sobre ellos.</p>
           <div class="actions"><a class="button primary" href="https://w.app/vicdata">Cuéntame tu proyecto</a><a class="button" href="#casos">Ver casos de trabajo</a></div>
         </div>
         <figure class="hero-chart">
+          <div class="showcase-label"><strong>Proyecto destacado</strong><span>ANIN · Power BI</span></div>
           <a class="report-preview" href="assets/tablero-27.webp" aria-label="Ampliar captura del tablero DS 096"><img src="assets/tablero-27.webp" alt="Captura del tablero de seguimiento de intervenciones DS 096"></a>
-          <figcaption>ANIN · Seguimiento semanal de intervenciones DS 096</figcaption>
+          <figcaption><a href="#caso-ds096">Seguimiento semanal de intervenciones DS 096 ↗</a></figcaption>
         </figure>
       </div>
       <section class="home-block" aria-labelledby="oferta-inicio">
@@ -53,9 +69,29 @@
         <h2 id="trabajos-inicio">Proyectos destacados</h2>
         <p>27 tableros desarrollados en cuatro instituciones públicas. Conoce también mi trabajo en automatización y en supervisiones nacionales.</p>
         <div class="grid home-cases">
-          <a href="#caso-ds096">ANIN <span>Seguimiento de intervenciones DS 096 ↗</span></a>
-          <a href="#caso-calidad">MINSA <span>Indicadores de calidad en salud ↗</span></a>
-          <a href="#caso-defensoria">Defensoría del Pueblo <span>Supervisión nacional penitenciaria ↗</span></a>
+          <a href="#caso-ds096"><img src="assets/tablero-27-mini.webp" alt="" loading="lazy">ANIN <span>Seguimiento de intervenciones DS 096 ↗</span></a>
+          <a href="#caso-calidad"><img src="assets/tablero-22-mini.webp" alt="" loading="lazy">MINSA <span>Indicadores de calidad en salud ↗</span></a>
+          <a href="#caso-defensoria"><img src="assets/tablero-07-mini.webp" alt="" loading="lazy">Defensoría del Pueblo <span>Supervisión nacional penitenciaria ↗</span></a>
+        </div>
+      </section>
+      <section class="home-block demo" aria-labelledby="demo-title">
+        <div>
+          <p class="eyebrow">Demostración · Datos ficticios</p>
+          <h2 id="demo-title">Seguimiento de contrataciones</h2>
+          <p>Selecciona un área para explorar cómo cambia la distribución de los estados.</p>
+          <label for="demo-area">Área</label>
+          <select id="demo-area">
+            <option value="todas">Todas las áreas</option>
+            <option value="logistica">Logística</option>
+            <option value="infraestructura">Infraestructura</option>
+            <option value="administracion">Administración</option>
+          </select>
+        </div>
+        <div class="demo-chart">
+          <p id="demo-summary" role="status"><strong>30 contrataciones</strong></p>
+          <div class="demo-row"><span>Concluidas</span><meter min="0" max="30" value="16" aria-label="Concluidas"></meter><output>16</output></div>
+          <div class="demo-row"><span>En proceso</span><meter min="0" max="30" value="9" aria-label="En proceso"></meter><output>9</output></div>
+          <div class="demo-row"><span>Con retraso</span><meter min="0" max="30" value="5" aria-label="Con retraso"></meter><output>5</output></div>
         </div>
       </section>
     </section>
@@ -63,8 +99,9 @@
       <div class="about">
         <img class="portrait" src="assets/retrato.webp" alt="Retrato de Vic Data" width="400" height="400">
         <div>
-          <h1 id="titulo-sobre">Sobre mí</h1>
-          <p class="bio-paragraph">Soy Victor Marchena Bautista, economista y fundador de Vic Data. Trabajo con equipos que necesitan ordenar sus datos, automatizar reportes o entender qué dicen sus indicadores. La economía me ayuda a formular las preguntas y la programación me permite llevar el análisis a un tablero, un reporte o un proceso que el equipo pueda usar.</p>
+          <p class="eyebrow">Vic Data · Lima, Perú</p>
+          <h1 id="titulo-sobre">Soy Victor Marchena</h1>
+          <p class="bio-paragraph">Soy economista y fundador de Vic Data. Trabajo con equipos que necesitan ordenar sus datos, automatizar reportes o entender qué dicen sus indicadores. La economía me ayuda a formular las preguntas y la programación me permite llevar el análisis a un tablero, un reporte o un proceso que el equipo pueda usar.</p>
           <p class="bio-paragraph">Estudié Economía Pura en la Universidad Nacional del Callao, donde quedé entre los tres primeros de mi promoción. Actualmente curso una maestría en Análisis y Visualización de Datos Masivos en UNIR México. También dicto clases y asesoro investigaciones y tesis en estadística y econometría aplicada.</p>
           <div class="actions"><a class="button primary" href="#experiencia">Ver experiencia</a><a class="button" href="#formacion">Ver formación</a></div>
         </div>
@@ -538,6 +575,24 @@
     </div>
     <div class="report-content"></div>
   </dialog>
-  <footer class="wrap footer"><strong>Vic Data</strong></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-content">
+      <div>
+        <a class="brand" href="#inicio"><img src="assets/vic-data.svg" width="42" height="42" alt=""> Vic Data</a>
+        <h2>Hablemos de tu proyecto</h2>
+        <p>Consultoría en datos, automatización e investigación aplicada.</p>
+      </div>
+      <div class="footer-links">
+        <a class="footer-email" href="mailto:vicdatamb@gmail.com">vicdatamb@gmail.com</a>
+        <a href="https://w.app/vicdata">WhatsApp ↗</a>
+        <a href="https://www.linkedin.com/in/vicdata/">LinkedIn ↗</a>
+      </div>
+      <div class="footer-links">
+        <a href="#servicios">Servicios METANOIA</a>
+        <a href="#casos">Casos de trabajo</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
